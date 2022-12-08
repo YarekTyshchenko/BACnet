@@ -5,6 +5,7 @@
     <Company>Ela-compil sp. z o. o.</Company>
     <Authors>Ela-compil and contributors</Authors>
     <Product>BACnet</Product>
+    <PackageId>BACnet-fork-yarekt</PackageId>
     <Copyright>Copyright (c) Ela-compil sp. z o. o.</Copyright>
     <Description>BACnet protocol library for .NET</Description>
     <OutputType>Library</OutputType>
@@ -14,7 +15,7 @@
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <PackageTags>bacnet;btl;automation</PackageTags>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/ela-compil/BACnet</RepositoryUrl>
+    <RepositoryUrl>https://github.com/YarekTyshchenko/BACnet</RepositoryUrl>
     <PackageIcon>logo.png</PackageIcon>
     <PackageIconUrl>https://raw.githubusercontent.com/ela-compil/BACnet/master/logo.png</PackageIconUrl>
   </PropertyGroup>

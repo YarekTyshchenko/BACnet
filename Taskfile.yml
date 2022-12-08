@@ -1,0 +1,21 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GITHUB_TOKEN:
+    sh: pass -o hark/nuget-github-token
+  NUGET_TOKEN:
+    sh: pass -o hark/nuget.org-push-api-key
+  config: Release
+
+tasks:
+  publish:
+    vars:
+      version:
+        sh: git describe --tags --always
+    cmds:
+    - rm bin/{{.config}}/*nupkg
+    - dotnet build -p:Version={{.version}} -c {{.config}}
+    - dotnet pack -p:Version={{.version}} -c {{.config}} --include-symbols -p:SymbolPackageFormat=snupkg
+    - dotnet nuget push bin/Debug/*.nupkg --api-key {{.NUGET_TOKEN}} --source nuget.org
